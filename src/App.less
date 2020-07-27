@@ -1,0 +1,284 @@
+@import '../node_modules/antd/dist/antd.less';
+
+.ss-App {
+  .bg-f4 {
+    background: #f4f4f4;
+  }
+  .border-radius-20 {
+    border-radius: 20px;
+  }
+  .border-radius-25 {
+    border-radius: 25px;
+  }
+  .border-radius-30 {
+    border-radius: 30px;
+  }
+  .color-primary {
+    color: @primary-color;
+  }
+  .color-black {
+    color: black;
+  }
+  .px-10-p {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+
+  .ss-banner {
+    height: 68vw;
+    // max-height: 1000px;
+    background-image: url('assets/bg.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .quote-option-div {
+    .ant-select.model-select {
+      width: 600px;
+      max-width: 90%;
+      height: 65px;
+      .ant-select-selector {
+        height: 100%;
+        border-radius: 30px;
+        .ant-select-selection-item {
+          font-size: 24px;
+          padding-top: 17px;
+        }
+      }
+      .ant-select-arrow {
+        right: 25px;
+        top: 30px;
+        svg {
+          width: 1.5em;
+          height: 1.5em;
+        }
+      }
+    }
+    .car-info {
+      .car-info-div {
+        padding-top: 54px;
+        padding-left: 10%;
+        padding-right: 10%;
+        .title {
+          text-align: left;
+          font-size: 27px;
+          padding-bottom: 20px;
+          font-weight: 600;
+          padding-left: 47px;
+        }
+        .ant-select.car-info-select {
+          height: 60px;
+          margin-bottom: 60px;
+          .ant-select-selector {
+            border: none;
+            background: #f4f4f4;
+            height: 100%;
+            border-radius: 30px;
+            .ant-select-selection-item {
+              font-size: 24px;
+              padding-top: 17px;
+              color: black;
+              font-weight: 600;
+            }
+          }
+          .ant-select-arrow {
+            right: 25px;
+            top: 30px;
+            svg {
+              width: 1.5em;
+              height: 1.5em;
+            }
+          }
+        }
+      }
+    }
+    .personal-info {
+      padding-top: 85px;
+      padding-bottom: 160px;
+      background: #f4f4f4;
+      .g-title {
+        font-size: 38px;
+        font-weight: 600;
+      }
+      .sub-title {
+        padding: 68px 0 40px 42px;
+        font-size: 31px;
+      }
+      .ant-select {
+        height: 60px;
+        width: 100%;
+        .ant-select-selector {
+          border: none;
+          height: 100%;
+          border-radius: 30px;
+          .ant-select-selection-item {
+            font-size: 22px;
+            padding-top: 17px;
+            color: black;
+            font-weight: 600;
+            padding-left: 35px;
+          }
+        }
+        .ant-select-arrow {
+          right: 25px;
+          top: 30px;
+          svg {
+            width: 1.5em;
+            height: 1.5em;
+          }
+        }
+      }
+    }
+    .footer {
+      padding-top: 80px;
+      padding-bottom: 160px;
+      button {
+        margin-bottom: 24px;
+        height: 92px;
+        border-radius: 45px;
+        width: 500px;
+        max-width: 85%;
+        span {
+          font-size: 32px;
+        }
+      }
+      img {
+        width: 90%;
+        max-width: 450px;
+      }
+    }
+  }
+
+  .quote-waiting-div {
+    .loading-div {
+      border-radius: 50%;
+      width: 45vw;
+      height: 45vw;
+      border: 6px solid #f2f2f2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-image: url('assets/car.png');
+      background-repeat: no-repeat;
+      background-position-y: center;
+      background-size: contain;
+      #html-spinner {
+        width: 40vw;
+        height: 40vw;
+        border: 10px solid #d6d6d6;
+        border-top: 10px solid black;
+        border-right: 10px solid black;
+        border-radius: 50%;
+        position: absolute;
+        background: transparent;
+      }
+
+      &.small {
+        width: 80vw;
+        height: 80vw;
+        #html-spinner {
+          width: 70vw;
+          height: 70vw;
+          border-width: 7px;
+          border-top-width: 7px;
+          border-right-width: 7px;
+        }
+      }
+      #html-spinner {
+        -webkit-transition-property: -webkit-transform;
+        -webkit-transition-duration: 2.5s;
+        -webkit-animation-name: rotate;
+        -webkit-animation-iteration-count: infinite;
+        -webkit-animation-timing-function: linear;
+
+        -moz-transition-property: -moz-transform;
+        -moz-animation-name: rotate;
+        -moz-animation-duration: 2.5s;
+        -moz-animation-iteration-count: infinite;
+        -moz-animation-timing-function: linear;
+
+        transition-property: transform;
+        animation-name: rotate;
+        animation-duration: 2.5s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+      }
+
+      @-webkit-keyframes rotate {
+        from {
+          -webkit-transform: rotate(0deg);
+        }
+        to {
+          -webkit-transform: rotate(360deg);
+        }
+      }
+
+      @-moz-keyframes rotate {
+        from {
+          -moz-transform: rotate(0deg);
+        }
+        to {
+          -moz-transform: rotate(360deg);
+        }
+      }
+
+      @keyframes rotate {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+    }
+  }
+
+  .quote-notify-div {
+    .car-img-div {
+      img {
+        width: 100%;
+        max-width: 860px;
+      }
+    }
+    .call-chat-button {
+      height: 200px;
+      &.small {
+        height: auto;
+        padding-top: 20px;
+        padding-bottom: 20px;
+      }
+    }
+    .send-div {
+      input {
+        height: 60px;
+        border-radius: 30px;
+        padding-left: 40px;
+        padding-right: 32%;
+        font-size: 32px;
+        background: #f4f4f4;
+        border: none !important;
+      }
+      button {
+        max-width: 300px;
+        width: 30%;
+        position: absolute;
+        right: 0;
+        border-radius: 30px;
+        height: 60px;
+        span {
+          font-size: 22px;
+        }
+      }
+    }
+  }
+}
+
+.model-select-dropdown,
+.car-info-select-drop {
+  .ant-select-item-option-content {
+    font-size: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}

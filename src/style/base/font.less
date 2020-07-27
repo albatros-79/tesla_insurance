@@ -1,0 +1,14 @@
+// fontsize helpers (Min: 2px , Max: 100px, Multiples of 2)
+each(range(60), {
+    @value_2 : @value * 2;
+    .font-size-@{value_2} {
+        font-size: (@value_2 * 1px);
+    }
+});
+
+each(range(9), {
+    @value_100 : @value * 100;
+    .font-weight-@{value_100} {
+        font-weight: @value_100;
+    }
+})

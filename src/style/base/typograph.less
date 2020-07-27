@@ -1,0 +1,90 @@
+// width, height helpers (Min: 10%, Max: 100%, Multiples of 10, w-70-p, h-70-p)
+each(range(10), {
+    @value_10: @value * 10;
+    .w-@{value_10}-p {
+      width: (@value * 10%);
+    }
+    .h-@{value_10}-p {
+      height: (@value * 10%);
+    }
+  });
+
+// padding, margin helpers (Unit: em, Min: 1em, Max: 10em, EX: pt-em-7, mt-em-7)
+@set_margin_padding: {
+  m: margin;
+  p: padding;
+};
+each(@set_margin_padding, .(@prop, @abbrev) {
+  each(range(7), {
+    .@{abbrev}t-em-@{value} {
+      @{prop}-top: (@value * 1em) !important;
+    }
+    .@{abbrev}b-em-@{value} {
+      @{prop}-bottom: (@value * 1em) !important;
+    }
+    .@{abbrev}y-em-@{value} {
+      @{prop}-bottom: (@value * 1em) !important;
+      @{prop}-top: (@value * 1em) !important;
+    }
+    .@{abbrev}l-em-@{value} {
+      @{prop}-left: (@value * 1em) !important;
+    }
+    .@{abbrev}r-em-@{value} {
+      @{prop}-right: (@value * 1em) !important;
+    }
+    .@{abbrev}x-em-@{value} {
+      @{prop}-right: (@value * 1em) !important;
+      @{prop}-left: (@value * 1em) !important;
+    }
+    .@{abbrev}-em-@{value} {
+      @{prop}: (@value * 1em) !important;
+    }
+  })
+});
+// padding, margin helpers (Unit: pm, Min: 4px, Max: 200px, Multiples of 4, EX: p-4, m-4)
+each(@set_margin_padding, .(@prop, @abbrev) {
+  each(range(50), {
+    @value_4: @value * 4;
+    .@{abbrev}t-@{value_4} {
+      @{prop}-top: (@value_4 * 1px) !important;
+    }
+    .@{abbrev}b-@{value_4} {
+      @{prop}-bottom: (@value_4 * 1px) !important;
+    }
+    .@{abbrev}y-@{value_4} {
+      @{prop}-bottom: (@value_4 * 1px) !important;
+      @{prop}-top: (@value_4 * 1px) !important;
+    }
+    .@{abbrev}l-@{value_4} {
+      @{prop}-left: (@value_4 * 1px) !important;
+    }
+    .@{abbrev}r-@{value_4} {
+      @{prop}-right: (@value_4 * 1px) !important;
+    }
+    .@{abbrev}x-@{value_4} {
+      @{prop}-right: (@value_4 * 1px) !important;
+      @{prop}-left: (@value_4 * 1px) !important;
+    }
+    .@{abbrev}-@{value_4} {
+      @{prop}: (@value_4 * 1px) !important;
+    }
+  })
+});
+
+// position
+.p-absolute {
+  position: absolute;
+}
+.p-relative {
+  position: relative;
+}
+// text align
+.text-center {
+  text-align: center;
+}
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}
