@@ -37,18 +37,18 @@
     .ant-select.model-select {
       width: 600px;
       max-width: 90%;
-      height: 65px;
+      height: 50px;
       .ant-select-selector {
         height: 100%;
         border-radius: 30px;
         .ant-select-selection-item {
-          font-size: 24px;
-          padding-top: 17px;
+          font-size: 20px;
+          padding-top: 10px;
         }
       }
       .ant-select-arrow {
         right: 25px;
-        top: 30px;
+        top: 24px;
         svg {
           width: 1.5em;
           height: 1.5em;
@@ -62,29 +62,27 @@
         padding-right: 10%;
         .title {
           text-align: left;
-          font-size: 27px;
-          padding-bottom: 20px;
-          font-weight: 600;
+          font-size: 20px;
+          padding-bottom: 10px;
           padding-left: 47px;
         }
         .ant-select.car-info-select {
-          height: 60px;
-          margin-bottom: 60px;
+          height: 40px;
+          margin-bottom: 40px;
           .ant-select-selector {
             border: none;
             background: #f4f4f4;
             height: 100%;
             border-radius: 30px;
             .ant-select-selection-item {
-              font-size: 24px;
-              padding-top: 17px;
+              font-size: 16px;
+              padding-top: 7px;
               color: black;
-              font-weight: 600;
             }
           }
           .ant-select-arrow {
             right: 25px;
-            top: 30px;
+            top: 20px;
             svg {
               width: 1.5em;
               height: 1.5em;
@@ -98,31 +96,31 @@
       padding-bottom: 160px;
       background: #f4f4f4;
       .g-title {
-        font-size: 38px;
-        font-weight: 600;
+        font-size: 24px;
+        font-weight: 500;
+        color: #171a20;
       }
       .sub-title {
-        padding: 68px 0 40px 42px;
-        font-size: 31px;
+        padding: 25px 0 10px 42px;
+        font-size: 20px;
       }
       .ant-select {
-        height: 60px;
+        height: 40px;
         width: 100%;
         .ant-select-selector {
           border: none;
           height: 100%;
           border-radius: 30px;
           .ant-select-selection-item {
-            font-size: 22px;
-            padding-top: 17px;
-            color: black;
-            font-weight: 600;
+            font-size: 16px;
+            padding-top: 7px;
             padding-left: 35px;
+            color: black;
           }
         }
         .ant-select-arrow {
           right: 25px;
-          top: 30px;
+          top: 20px;
           svg {
             width: 1.5em;
             height: 1.5em;
@@ -135,12 +133,12 @@
       padding-bottom: 160px;
       button {
         margin-bottom: 24px;
-        height: 92px;
+        height: 50px;
         border-radius: 45px;
-        width: 500px;
-        max-width: 85%;
+        width: 400px;
+        max-width: 80%;
         span {
-          font-size: 32px;
+          font-size: 20px;
         }
       }
       img {
@@ -237,7 +235,7 @@
   .quote-notify-div {
     .car-img-div {
       img {
-        width: 100%;
+        // width: 80vw;
         max-width: 860px;
       }
     }
@@ -255,7 +253,7 @@
         border-radius: 30px;
         padding-left: 40px;
         padding-right: 32%;
-        font-size: 32px;
+        font-size: 18px;
         background: #f4f4f4;
         border: none !important;
       }
@@ -267,8 +265,28 @@
         border-radius: 30px;
         height: 60px;
         span {
-          font-size: 22px;
+          font-size: 18px;
         }
+      }
+    }
+  }
+
+  &.ss-mobile {
+    &.ss-default {
+      .ss-banner {
+        height: calc(100vh - 100px);
+      }
+      .quote-option-div {
+        .car-info {
+          .car-info-div {
+            padding-left: 0;
+            padding-right: 0;
+          }
+        }
+      }
+      .px-10-p {
+        padding-left: 0;
+        padding-right: 0;
       }
     }
   }

@@ -27,18 +27,18 @@ const QuoteOption = ({ onClickNext, windowWidth }) => {
 
   const maxYear = new Date().getFullYear() - 18;
   const yearRange = maxYear - 1919;
-  console.log('haha:', maxYear, yearRange);
-
   return (
     <div className="quote-option-div">
       <div className="car-info  d-flex-column align-items-center pt-140 pb-80">
-        <div className={`text-center ${windowWidth > 1400 ? 'w-70-p' : 'w-80-p'}`}>
-          <div className="font-size-20 font-weight-600 text-left ja-tag">
+        <div className={`text-center ${windowWidth > 1400 ? 'w-70-p' : 'w-90-p'}`}>
+          <div className="font-size-20 text-left ja-tag">
             {/* Tesla owners can enjoy an important Tesla and a comfortable and safe car life every day. Lorem ipsum dolor
             sit amet, consectetur adipiscing elit. Maecenas mattis, velit vel iaculis rhoncus */}
             人とクルマの毎日に安心をお届けします。万が一の事故や故障のときにも､｢3つの基本補償」と「3つの基本特約」でしっかりカバーします。
           </div>
-          <div className="font-size-36 font-weight-600 pt-108 pb-40 ja-tag">お車の情報</div>
+          <div className="font-size-24 pt-60 pb-40" style={{ color: '#171a20' }}>
+            お車の情報
+          </div>
           <Select
             value={state.model}
             onChange={handleChange('model')}
@@ -130,7 +130,7 @@ const QuoteOption = ({ onClickNext, windowWidth }) => {
         </div>
       </div>
       <div className="personal-info d-flex-column align-items-center">
-        <div className={`${windowWidth > 1400 ? 'w-70-p' : 'w-80-p'}`}>
+        <div className={`${windowWidth > 1400 ? 'w-70-p' : 'w-90-p'}`}>
           <div className="px-10-p">
             <div className="g-title ja-tag">お見積もり条件入力</div>
             <div className="sub-title">現在の等級（ノンフリート等級）</div>
@@ -154,7 +154,7 @@ const QuoteOption = ({ onClickNext, windowWidth }) => {
               <Option value="19_grade">19等級</Option>
               <Option value="20_grade">20等級</Option>
             </Select>
-            <div className="sub-title pt-100">記名被保険者(見積対象のお車を主に使用される方)の生年月日</div>
+            <div className="sub-title pt-24">記名被保険者(見積対象のお車を主に使用される方)の生年月日</div>
             <Row gutter={32}>
               <Col span={24} lg={8} className="pb-20">
                 <Select dropdownClassName="car-info-select-drop" defaultValue="1990">
@@ -184,14 +184,14 @@ const QuoteOption = ({ onClickNext, windowWidth }) => {
                 </Select>
               </Col>
             </Row>
-            <div className="g-title pt-100 ja-tag">補償範囲</div>
+            <div className="g-title pt-40 ja-tag">補償範囲</div>
             <div className="sub-title">補償を受けられる運転者を限定されますか？</div>
             <Select defaultValue="not_limited" dropdownClassName="car-info-select-drop">
               <Option value="not_limited">限定しない</Option>
               <Option value="limited_to_registered_insured">記名被保険者に限定する</Option>
               <Option value="named_insured_limited_spouse">記名被保険者とその配偶者に限定する</Option>
             </Select>
-            <div className="sub-title pt-108">
+            <div className="sub-title pt-24">
               「同居のご家族等」*の中で、見積対象のお車を運転される方のうち、最も若い方の年齢をお選びください。
             </div>
             <Select defaultValue="under_20" dropdownClassName="car-info-select-drop">
@@ -200,7 +200,7 @@ const QuoteOption = ({ onClickNext, windowWidth }) => {
               <Option value="from_26_to_34">26～34歳</Option>
               <Option value="over_35">35歳以上</Option>
             </Select>
-            <div className="g-title pt-100 pb-52 ja-tag">
+            <div className="g-title pt-60 pb-52 ja-tag">
               記名被保険者(見積対象のお車を主に使用される方)の免許証の種類（色）
             </div>
             <Select defaultValue="gold" dropdownClassName="car-info-select-drop">

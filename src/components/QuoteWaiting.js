@@ -12,9 +12,7 @@ const QuoteWaiting = ({ windowWidth }) => {
       <div className={`loading-div p-relative ${windowWidth > 700 ? 'none' : 'small'}`}>
         <div id="html-spinner"></div>
       </div>
-      <div className="font-size-38 font-weight-600 pt-100 px-40 text-center">
-        お見積もりを計算しています。お待ちください。
-      </div>
+      <div className="font-size-20 pt-100 px-40 text-center">お見積もりを計算しています。お待ちください。</div>
     </div>
   );
 };
